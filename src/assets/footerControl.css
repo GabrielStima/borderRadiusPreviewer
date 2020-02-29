@@ -24,3 +24,6 @@
 .copy-border:hover{
     background-color: rgba(245, 177, 88, 0.795);
 }
+#border-radius-props{
+    display:none
+}

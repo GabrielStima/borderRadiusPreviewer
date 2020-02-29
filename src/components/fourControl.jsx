@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import FooterControl from './footerControl';
+import '../assets/fourControl.css';
 
 export default class fourControl extends Component {
     constructor(){
@@ -30,8 +31,10 @@ export default class fourControl extends Component {
     }
     render() {
         return (
-            <div>
-                <h2>False</h2>
+            <div className='four-control-body'>
+                <div id='fourControlSquare' className='four-control-square'>
+                    
+                </div>
                 <FooterControl {...this.getPropsFooterControl()}/>
             </div>
         );
