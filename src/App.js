@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './assets/App.css';
-import FourControl from './components/fourControl'
-import EightControl from './components/eightControl'
+import FourValues from './components/fourValues'
+import EightValues from './components/eightValues'
 
 function App() {
   const [optionSelect, setOptionSelect] = useState(0);
@@ -25,11 +25,11 @@ function App() {
           </>
        ): optionSelect === 1 ? (
           <>
-            <FourControl/>
+            <FourValues/>
           </>
        ) : optionSelect === 2 && (
          <>
-            <EightControl/>
+            <EightValues/>
          </>
        ) }
     </div>

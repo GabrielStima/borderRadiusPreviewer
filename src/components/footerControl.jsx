@@ -8,11 +8,23 @@ export default function footerControl(props) {
   }
 
   return (
-    <div className='footer-control'>
+    <>
       <p className='title'>Border-Radius: </p>
-      <span className='props-values'>{props.value1} {props.value2} {props.value3} {props.value4} / {props.value5} {props.value6} {props.value7} {props.value8}</span>
-      <button className='copy-border' onClick={copyProps}>Copy</button>
-      <input type="text" disabled id='border-radius-props' value={`${props.value1} ${props.value2} ${props.value3} ${props.value4} / ${props.value5} ${props.value6} ${props.value7} ${props.value8}`}/>
-    </div>
+      <div className='footer-control'>
+        {props.type === 'four' ? (
+          <>
+            <span className='props-values'>{props.values.topLeft} {props.values.topRight} {props.values.bottomRight} {props.values.bottomLeft}</span>
+            <button className='copy-border' onClick={copyProps}>Copy</button>
+            <input type="text" disabled id='border-radius-props' value={`${props.values.topLeft} ${props.values.topRight} ${props.values.bottomRight} ${props.values.bottomLeft}`}/>
+          </>
+        ):( 
+          <>
+            <span className='props-values'> {props.values.topLeftHorizontal} {props.values.topLeftVertical} {props.values.topRightHorizontal} {props.values.topRightVertical} / {props.values.bottomRightHorizontal} {props.values.bottomRightVertical} {props.values.bottomLeftHorizontal} {props.values.bottomLeftVertical}</span>
+            <button className='copy-border' onClick={copyProps}>Copy</button>
+            <input type="text" disabled id='border-radius-props' value={`${props.values.topLeftHorizontal} ${props.values.topLeftVertical} ${props.values.topRightHorizontal} ${props.values.topRightVertical} / ${props.values.bottomRightHorizontal} ${props.values.bottomRightVertical} ${props.values.bottomLeftHorizontal} ${props.values.bottomLeftVertical}`}/>
+          </>
+        )}
+      </div>
+    </>
   );
 }

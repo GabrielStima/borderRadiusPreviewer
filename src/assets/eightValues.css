@@ -1,0 +1,17 @@
+.eight-control{
+    display: flex;
+    flex-direction: row;
+}
+.eight-control-square{
+    width: 20rem;
+    height: 20rem;
+    margin-bottom: 1rem;
+    background-color: white;
+}
+.eight-control-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 2rem;
+    margin-right: 17rem;
+}
